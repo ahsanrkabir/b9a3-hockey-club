@@ -21,7 +21,6 @@
             theme: {
                 extend: {
                     colors: {
-                        clifford: '#da373d',
                         'primary-color': '#FF4240',
                         'secondary-color': '#424247',
                     }
@@ -38,7 +37,7 @@
 </head>
 
 <body class="font-manrope">
-    <header class="container mx-auto mb-10 lg:mb-28 p-2 lg:p-0">
+    <header class="container mx-auto mb-10 lg:mb-0 p-2 lg:p-0">
         <!-- nav section -->
         <nav class="mb-5 lg:mb-10">
             <div class="navbar bg-base-100">
@@ -53,11 +52,11 @@
                         </div>
                         <ul tabindex="0"
                             class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-color-secondary">
-                            <li><a>Home</a></li>
-                            <li><a>About</a></li>
-                            <li><a>Pages</a></li>
-                            <li><a>Blog</a></li>
-                            <li><a>Contact</a></li>
+                            <li><a class="hover:text-primary-color">Home</a></li>
+                            <li><a class="hover:text-primary-color">About</a></li>
+                            <li><a class="hover:text-primary-color">Pages</a></li>
+                            <li><a class="hover:text-primary-color">Blog</a></li>
+                            <li><a class="hover:text-primary-color">Contact</a></li>
                         </ul>
                     </div>
                     <a class="btn btn-ghost text-xl lg:text-4xl font-extrabold">Hockey <span
@@ -65,48 +64,60 @@
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1 text-color-secondary">
-                        <li><a>Home</a></li>
-                        <li><a>About</a></li>
-                        <li><a>Pages</a></li>
-                        <li><a>Blog</a></li>
-                        <li><a>Contact</a></li>
+                        <li><a class="hover:text-primary-color">Home</a></li>
+                        <li><a class="hover:text-primary-color">About</a></li>
+                        <li><a class="hover:text-primary-color">Pages</a></li>
+                        <li><a class="hover:text-primary-color">Blog</a></li>
+                        <li><a class="hover:text-primary-color">Contact</a></li>
                     </ul>
                 </div>
                 <div class="navbar-end">
                     <i class="fa-solid fa-magnifying-glass text-color-secondary mr-2 lg:mr-7"></i>
-                    <a class="btn bg-primary-color text-white">Get Ticket</a>
+                    <a class="btn bg-primary-color text-white hover:text-primary-color">Get Ticket</a>
                 </div>
             </div>
         </nav>
 
-
-        <!-- slider/carousel -->
-        <div class="carousel w-full h-[200px] lg:h-[550px] rounded-2xl">
-            <!-- slide 1 -->
-            <div id="slide1" class="carousel-item relative w-full">
-                <img src="images/slide1.png" class="w-full" />
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" class="btn btn-circle bg-black text-white border-0">❮</a>
-                    <a href="#slide2" class="btn btn-circle bg-black text-white border-0">❯</a>
+        <!-- banner section -->
+        <div class="">
+            <!-- slider/carousel -->
+            <div class="carousel w-full h-[200px] lg:h-[550px] rounded-2xl">
+                <!-- slide 1 -->
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="images/slide1.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle bg-black text-white border-0">❮</a>
+                        <a href="#slide2" class="btn btn-circle bg-black text-white border-0">❯</a>
+                    </div>
+                </div>
+                <!-- slide 2 -->
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="images/slide2.jpg" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle bg-black text-white border-0">❮</a>
+                        <a href="#slide3" class="btn btn-circle bg-black text-white border-0">❯</a>
+                    </div>
+                </div>
+                <!-- slide 3 -->
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="images/slide3.jpeg" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle bg-black text-white border-0">❮</a>
+                        <a href="#slide1" class="btn btn-circle bg-black text-white border-0">❯</a>
+                    </div>
                 </div>
             </div>
-            <!-- slide 2 -->
-            <div id="slide2" class="carousel-item relative w-full">
-                <img src="images/slide2.jpg" class="w-full" />
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" class="btn btn-circle bg-black text-white border-0">❮</a>
-                    <a href="#slide3" class="btn btn-circle bg-black text-white border-0">❯</a>
-                </div>
-            </div>
-            <!-- slide 3 -->
-            <div id="slide3" class="carousel-item relative w-full">
-                <img src="images/slide3.jpeg" class="w-full" />
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" class="btn btn-circle bg-black text-white border-0">❮</a>
-                    <a href="#slide1" class="btn btn-circle bg-black text-white border-0">❯</a>
-                </div>
+            <!-- floating box -->
+            <div
+                class="bg-black rounded-2xl p-3 lg:p-8 max-w-[600px] h-[110px] lg:h-auto space-y-2 relative lg:-top-44 lg:left-[900px]">
+                <h3 class="text-white text-sm lg:text-2xl font-extrabold">Meet all the heroes from the field</h3>
+                <p class="text-white text-sm lg:text-base font-medium">Calling all hockey enthusiasts! Elevate your game
+                    with our premium
+                    gear,
+                    expert coaching, and a vibrant community.</p>
             </div>
         </div>
+
     </header>
     <main class="container mx-auto mb-10 lg:mb-28 p-2 lg:p-0">
         <!-- club stats section -->
@@ -174,7 +185,9 @@
                                 teamwork, and a passion for the game. Unleash your potential on the ice with us today!
                             </p>
                             <div class="card-actions">
-                                <button class="btn bg-primary-color text-white border-0">Register Now!</button>
+                                <button
+                                    class="btn bg-primary-color text-white border-0 hover:text-primary-color">Register
+                                    Now!</button>
                             </div>
                     </div>
                 </div>
@@ -188,7 +201,9 @@
                                 teamwork, and a passion for the game. Unleash your potential on the ice with us today!
                             </p>
                             <div class="card-actions">
-                                <button class="btn bg-primary-color text-white border-0">Register Now!</button>
+                                <button
+                                    class="btn bg-primary-color text-white border-0 hover:text-primary-color">Register
+                                    Now!</button>
                             </div>
                     </div>
                 </div>
@@ -202,7 +217,9 @@
                                 teamwork, and a passion for the game. Unleash your potential on the ice with us today!
                             </p>
                             <div class="card-actions">
-                                <button class="btn bg-primary-color text-white border-0">Register Now!</button>
+                                <button
+                                    class="btn bg-primary-color text-white border-0 hover:text-primary-color">Register
+                                    Now!</button>
                             </div>
                     </div>
                 </div>
@@ -244,7 +261,7 @@
                         <h2 class="card-title">Hockey Jersey</h2>
                         <p>Official jerseys for die-hard fans around the globe</p>
                         <div class="flex flex-row gap-5">
-                            <h4>Price - $22.00</h4>
+                            <h4 class="text-primary-color font-extrabold">Price - $22.00</h4>
                             <div class="flex flex-row items-center gap-2">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <p>Delivery Fee : Free</p>
@@ -275,7 +292,7 @@
                         <h2 class="card-title">FIFA Football</h2>
                         <p>Football from the last World Cup</p>
                         <div class="flex flex-row gap-5">
-                            <h4>Price - $30.00</h4>
+                            <h4 class="text-primary-color font-extrabold">Price - $30.00</h4>
                             <div class="flex flex-row items-center gap-2">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <p>Delivery Fee : Free</p>
@@ -306,7 +323,7 @@
                         <h2 class="card-title">Exclusive Hockey Cap</h2>
                         <p>Exclusive caps from your favorite teams</p>
                         <div class="flex flex-row gap-5">
-                            <h4>Price - $26.00</h4>
+                            <h4 class="text-primary-color font-extrabold">Price - $26.00</h4>
                             <div class="flex flex-row items-center gap-2">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <p>Delivery Fee : Free</p>
@@ -337,7 +354,7 @@
                         <h2 class="card-title">Official Football Jersey</h2>
                         <p>Jerseys from your favorite Football teams</p>
                         <div class="flex flex-row gap-5">
-                            <h4>Price - $46.00</h4>
+                            <h4 class="text-primary-color font-extrabold">Price - $46.00</h4>
                             <div class="flex flex-row items-center gap-2">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <p>Delivery Fee : Free</p>
@@ -368,7 +385,7 @@
                         <h2 class="card-title">Professional Hockey Kit</h2>
                         <p>All equipments needed to play Hockey</p>
                         <div class="flex flex-row gap-5">
-                            <h4>Price - $22.00</h4>
+                            <h4 class="text-primary-color font-extrabold">Price - $22.00</h4>
                             <div class="flex flex-row items-center gap-2">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <p>Delivery Fee : Free</p>
@@ -399,7 +416,7 @@
                         <h2 class="card-title">Deer Football</h2>
                         <p>Most common football around the globe</p>
                         <div class="flex flex-row gap-5">
-                            <h4>Price - $15.00</h4>
+                            <h4 class="text-primary-color font-extrabold">Price - $15.00</h4>
                             <div class="flex flex-row items-center gap-2">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <p>Delivery Fee : Free</p>
@@ -487,9 +504,126 @@
                 </div>
             </div>
         </section>
-    </main>
-    <footer>
 
+
+        <!-- contact section -->
+        <section>
+            <!-- contact intro -->
+            <div class="text-center space-y-3 mb-14 lg:pt-24">
+                <h3 class="text-4xl font-extrabold pt-10 lg:pt-0">Get In Touch</h3>
+                <p class="font-medium text-secondary-color">For inquiries or to join our hockey club, contact us at
+                    [hockey@support.com]. We welcome enthusiasts of all levels to share the passion for the game.</p>
+            </div>
+            <!-- form container -->
+            <div class="flex gap-7 flex-col lg:flex-row">
+                <!-- form info -->
+                <div class="space-y-8 flex-1">
+                    <div class="space-y-4 bg-lime-100 p-10 border-0 rounded-2xl">
+                        <img src="images/Group 1171275317.png" alt="">
+                        <p>Phone Number : </p>
+                        <h4 class="text-xl font-bold">(+62) 123-321-543</h4>
+                    </div>
+                    <div class="space-y-4 bg-yellow-100 p-10 border-0 rounded-2xl">
+                        <img src="images/Group 1171275318.png" alt="">
+                        <p>Email : </p>
+                        <h4 class="text-xl font-bold">hockeys@support.com</h4>
+                    </div>
+                    <div class="space-y-4 bg-blue-100 p-10 border-0 rounded-2xl">
+                        <img src="images/Group 1171275321.png" alt="">
+                        <p>Location : </p>
+                        <h4 class="text-xl font-bold">152/1 Mohakhali Wireless Gate</h4>
+                    </div>
+                </div>
+                <!-- form inputs -->
+                <div class="flex-1 space-y-20 lg:py-20">
+                    <div class="flex gap-10 flex-col lg:flex-row">
+                        <div class="space-y-3">
+                            <h4 class="text-xl font-semibold">Your Name</h4>
+                            <input type="text" placeholder="Enter Your Full Name"
+                                class="input input-bordered w-full max-w-xs" />
+                        </div>
+                        <div class="space-y-3">
+                            <h4 class="text-xl font-semibold">Your Email</h4>
+                            <input type="email" placeholder="Enter Your Email"
+                                class="input input-bordered w-full max-w-xs" />
+                        </div>
+                    </div>
+                    <div class="flex gap-10 flex-col lg:flex-row">
+                        <div class="space-y-3">
+                            <h4 class="text-xl font-semibold">Your Subject</h4>
+                            <input type="text" placeholder="Enter Your Subject"
+                                class="input input-bordered w-full max-w-xs" />
+                        </div>
+                        <div class="space-y-3">
+                            <h4 class="text-xl font-semibold">Your Phone Number</h4>
+                            <input type="text" placeholder="Enter Your Phone Number"
+                                class="input input-bordered w-full max-w-xs" />
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="text-xl font-semibold">Your Message</h4>
+                        <input type="text" placeholder="Type Your Message Here"
+                            class="input input-bordered w-full max-w-xs" />
+                    </div>
+                    <div>
+                        <button class="btn bg-primary-color text-white hover:text-primary-color">Send Messsage</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- social media icons -->
+        <section class="text-center mt-20 bg-[#13131805] p-10">
+            <h4 class="text-2xl font-extrabold mb-5">Social Media</h4>
+            <div class="flex gap-10 flex-row justify-center">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+        </section>
+    </main>
+    <!-- footer section -->
+    <footer class="footer p-10 bg-black text-white">
+        <aside class="flex gap-4 flex-col pl-0 lg:pl-28 items-center lg:items-start">
+            <h4 class="text-2xl font-extrabold">Get In Touch</h4>
+            <p class="lg:text-left text-center">Thank you for exploring our hockey universe! <br>Stay connected for the
+                latest updates, events, and gear.
+                Join our community and <br> let's continue celebrating the spirit of hockey together!</p>
+            <div class="flex gap-4 flex-row items-center">
+                <i class="fa-regular fa-envelope text-red-500"></i>
+                <p>hockeys@support.com</p>
+            </div>
+            <div class="flex gap-4 flex-row items-center">
+                <i class="fa-solid fa-phone text-red-500"></i>
+                <p>hockeys@support.com</p>
+            </div>
+        </aside>
+        <div class="flex flex-row gap-24">
+            <nav class="flex flex-col gap-3 items-center lg:items-start">
+                <header class="footer-title">Company</header>
+                <a class="link link-hover">About Us</a>
+                <a class="link link-hover">Leadership</a>
+                <a class="link link-hover">Careers</a>
+                <a class="link link-hover">News & Article</a>
+            </nav>
+            <nav class="flex flex-col gap-3 items-center lg:items-start pl-0 lg:pl-[120px]">
+                <header class="footer-title">Support</header>
+                <a class="link link-hover">Help Center</a>
+                <a class="link link-hover">FAQ</a>
+                <a class="link link-hover">Ticket Support</a>
+                <a class="link link-hover">Contact Us</a>
+            </nav>
+        </div>
+        <nav class="flex flex-col gap-3 items-center lg:items-start pl-[100px] lg:pl-0">
+            <header class="footer-title">Services</header>
+            <a class="link link-hover">Academy</a>
+            <a class="link link-hover">Group Lesson</a>
+            <a class="link link-hover">Private Lesson</a>
+            <a class="link link-hover">Hockeys for kids</a>
+            <a class="link link-hover">Hockeys for Adult</a>
+        </nav>
     </footer>
 </body>
 
